@@ -1,341 +1,312 @@
 /******BASE STYLES******/
 
+html{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
 body{
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-#about, #work, #contact{
-	height: 600px;
+h1, h2{
+  font-family: 'Lora', serif;
+}
+
+h1, h2, p{
+  padding: 0 1rem;
+}
+
+ul{
+padding-left: 0;
+list-style: none;
+}
+ul li{
+  display: inline-block;
 }
 
 
 /******GRID/LAYOUT******/
 
 
-.full-width{
-  padding: 1rem;
-}
 .full-width, .half-width, .third-width{
   display: block;
   width: 100%;
-  float: none;
 }
 
 @media screen and (min-width: 910px){
   .full-width{
-      width: 1200px;
+      width: 100%;
       margin: 0 auto;
   }
 
   .half-width{
-      width: 600px;
-      float: left;
+    width: 50%;
+    float: left;
   }
 
   .third-width{
-      width: 400px;
-      float: left;
+    width: 33%;
+    float: left;
   }
 }
 
 
 /******HEADER******/
 
- header{
-      background: url("img/hero.png");
-      background-size: cover;
-  }
+header{
+  display: inline-block;
+  width: 100%;
+  min-height: 300px;
+  background: url("../img/hero-mobile.jpg") no-repeat center;
+  background-size: cover;
+}
 
-  header h1{
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Lora', serif;
-    color: #bbc085;
-  }
+header .wrapper{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+ -webkit-box-pack: justify;
+ -ms-flex-pack: justify;
+ justify-content: space-between;
+  background: rgba(33, 33, 33, 0.05);
+}
 
-  nav{
-    text-align: center;
-  }
-  nav ul{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
+nav ul{
+  float: right;
+}
+nav ul li a{
+  padding: 0 1rem;
+}
+header h1{
+  text-align: center;
+  font-size: 1.8rem;
+  color: #bbc085;
+}
 
-  nav ul li{
-      display: inline-block;
-  }
+nav{
+  text-align: center;
+}
+nav ul{
+  float: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 1rem 0 0;
+}
 
-  nav ul li a{
-    text-transform: uppercase;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0 1.5rem;
-    color: #828282;
-  }
+nav ul li a{
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 1rem;
+  color: #828282;
+}
 
-  header h2{
-      clear: both;
-      font-family: 'Lora', serif;
-      font-size: 20px;
-      line-height: 1.2;
-      padding: 25px 0 100px;
-  }
-
+header h2{
+  font-size: 1.7rem;
+  line-height: 1.2;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 9rem;
+  color: #828282;
+}
+header h2 span {
+  color:black;
+}
+ 
 
 @media screen and (min-width: 910px){
   header{
-      height: 800px;
-      background: url("/img/hero.png");
-      background-size: cover;
+    min-height: 600px;
+    background: url("../img/hero.png") no-repeat bottom;
+    background-size: cover;
   }
-
+  header .wrapper{
+    margin-top: 0.5rem;
+    background: none;
+  }
   header h1{
-      padding: 50px 0;
-      font-size: 30px;
-      font-family: 'Lora', serif;
-      color: #bbc085;
+    font-size: 48px;
+    margin: 0;
   }
 
-  nav{
-      float: right;
-      padding: 75px 40px;
-  }
-
-  nav ul li{
-      display: inline-block;
+  nav ul{
+    padding-left: 100px
   }
 
   nav ul li a{
-      text-transform: uppercase;
-      text-decoration: none;
-      font-size: 18px;
-      color: #828282;
-      padding-left: 80px;
+    text-decoration: none;
+    font-size: 22px;
+    padding-left: 30px;
+  }
+  nav ul li a:hover{
+    text-decoration: underline;
   }
 
   header h2{
-      width:1000px;
-      clear: both;
-      font-family: 'Lora', serif;
-      font-size: 72px;
-      line-height: 1.2;
-      color: #9a9b9b;
-      padding: 20px 0;
+    text-align: left;
+    font-size: 44px;
+    padding: 4.5rem 2rem;
   }
 
-  header h2 span {
-      color:black;
+}
+
+@media screen and (min-width: 1250px){
+  header{
+    min-height: 700px;
+  }
+  header h2{
+    text-align: center;
+    margin: 0 auto;
+    padding: 6rem 2rem 0;
   }
 }
 
-/******ABOUT******/
 
+/******MAIN******/
 
-/*
-#about .full-width{
-	padding: 80px 0;
-}
-*/
-
-/*
-#about h2{
-	font-family: 'Lora', serif;
-	font-size: 36px;
-}
-
-#about p{
-	font-family: 'Source Sans Pro', sans-serif;
-	color: #7f7f7f;
-	line-height: 40px;
-	padding-right: 50px;
-}
-*/
-
-main{
-  padding: 2rem 0;
+main .full-width{
   background: #f9ceb7;
   text-align: center;
 }
 
+
 /******WORK******/
+
 #work{
-  display: table;
+  display: inline-block;
 }
+
 #work .full-width{
-  padding-left: 0;
+  padding: 2rem 0;
 }
 
 #work .third-width{
-  width: 90%;
-  margin: 2rem auto;
+  padding: 1rem 0;
 }
 
-
 @media screen and (min-width: 910px){
-  #work{
-      background: #f9ceb7;
-      text-align: center;
-  }
 
   #work .full-width{
-      padding: 115px 0;
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
   }
 
   #work img{
-      padding-bottom: 30px;
+    padding-bottom: 1rem;
   }
 
   #work h3{
-      font-size: 24px;
-      width: 190px ;
-      margin: 0 auto;
+    font-size: 24px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    color: #262a2b;
   }
 
   #work p{
-      font-family: 'Lora', serif;
-      font-size: 18px;
-      line-height: 30px;
-      color: #262a2b;
-      padding: 0 35px;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    line-height: 30px;
+    color: #262a2b;
   }
 }
-
 
 
 /******CONTACT******/
 
-  #contact{
-      background: #ebebeb;
-    display:table;
-    width: 100%;
-  }
-
-#contact .full-width{
-  width:100%;
-}
-
-#contact .half-width{
-  width: 90%;
-  margin: 0 auto;
+#contact{
+  background: #ebebeb;
+  width: 100%;
+  display: inline-block;
   text-align: center;
+  padding: 2rem 0;
 }
 
   #contact-img{
-      border: 15px solid white;
+    border: 15px solid white;
     width: 100%;
     height: auto;
     max-width: 350px;
   }
 
-  #contact h2, #email-header, #socialmedia-header, #contact ul{
-      padding: 0;
-  }
-
   #envelope{
-/*      padding: 0 10px 0 115px;*/
-    vertical-align: text-bottom;
+    vertical-align: bottom;
   }
 
   #contact h2{
-      font-family: 'Lora', serif;
-      font-size: 30px;
-    text-align: center;
+    font-size: 30px;
   }
 
   #email-header{
-      font-size: 20px;
-      font-weight: 400;
+    font-size: 20px;
+    font-weight: 400;
   }
 
   #socialmedia-header{
-      font-size: 20px;
-      font-weight: 700;
-/*      margin: 40px 0 0;*/
+    font-size: 20px;
+    font-weight: 700;
   }
 
   #contact a{
-      text-decoration: none;
-      color: #c49075;
-      font-weight: 700;
-      font-size: 26px;
-/*    vertical-align: top;*/
+    text-decoration: none;
+    color: #c49075;
+    font-weight: 700;
+    font-size: 22px;
   }
 
   #contact ul{
-      list-style: none;
     text-align: center;
   }
 
   #contact ul li{
-      display: inline-block;
-  }
-
-  #contact ul img{
-      padding-right: 50px;
+    padding: 0 20px;
   }
 
 @media screen and (min-width: 910px){
+
   #contact{
-      background: #ebebeb;
+    text-align: left;
   }
-
   #contact .full-width{
-      padding: 110px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
-
+  
   #contact-img{
-      border: 15px solid white;
+    max-width: 80%;
+    height: auto;
+    margin: 0 2rem;
+    border: 15px solid white;
   }
-
-  #contact h2, #email-header, #socialmedia-header, #contact ul{
-      padding-left: 115px;
-  }
-
+  
   #envelope{
-      padding: 0 10px 0 115px;
+    padding-left: 1rem;
   }
-
-  #contact h2{
-      font-family: 'Lora', serif;
-      font-size: 36px;
+  
+  #contact a:hover{
+    opacity: .8;
   }
+}
 
-  #email-header{
-      font-size: 32px;
-      font-weight: 400;
-      margin: -30px 0 5px 0;
-  }
-
-  #socialmedia-header{
-      font-size: 29px;
-      font-weight: 700;
-      margin: 40px 0 0;
-  }
-
-  #contact a{
-      text-decoration: none;
-      color: #c49075;
-      font-weight: 700;
-      font-size: 28px;
-  }
-
+@media screen and (min-width: 1250px){
   #contact ul{
-      list-style: none;
-    text-align: center;
+    text-align: left;
   }
-
-  #contact ul li{
-      display: inline-block;
-  }
-
-  #contact ul img{
-      padding-right: 50px;
-  }
-  }
+}
 
